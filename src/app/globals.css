@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+/* Dirección de arte: editorial clínico en frío. Blanco, petróleo y menta. */
+@theme {
+  --color-fondo: #eef3f3;
+  --color-papel: #ffffff;
+  --color-tinta: #0d2329;
+  --color-suave: #5b6e72;
+  --color-linea: #d6e1e2;
+  --color-acento: #0b6e75;
+  --color-acento-2: #cdebe6;
+  --font-sans: var(--fuente-sans), system-ui, sans-serif;
+  --font-serif: var(--fuente-serif), Georgia, serif;
+  --font-mono: var(--fuente-mono), ui-monospace, monospace;
+}
+
+html, body { overflow-x: clip; }
+body { background: var(--color-fondo); color: var(--color-tinta); font-family: var(--font-sans); }
+.mezcla em { font-family: var(--font-serif); font-style: italic; font-weight: 400; text-transform: none; }
+.vidrio { background: rgb(255 255 255 / .14); backdrop-filter: blur(18px) saturate(1.4); border: 1px solid rgb(255 255 255 / .28); color: #fff; }
+.bordes-suaves { mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
+.texto-desvanece { background: linear-gradient(180deg, var(--color-acento) 15%, transparent); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.marca-agua { background: linear-gradient(180deg, color-mix(in oklab, var(--color-tinta) 9%, transparent), transparent 85%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+@keyframes subir { from { transform: translateY(40%); opacity: 0 } }
+details > summary { list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
